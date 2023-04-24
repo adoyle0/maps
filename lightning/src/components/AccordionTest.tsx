@@ -1,20 +1,9 @@
-import {
-    Accordion,
-    AccordionButton,
-    AccordionHeader,
-    AccordionItem,
-    AccordionPanel,
-} from 'solid-headless';
-import {
-    createResource,
-    ErrorBoundary,
-    For,
-    Show,
-} from 'solid-js';
+import { Accordion, AccordionButton, AccordionHeader, AccordionItem, AccordionPanel, } from 'solid-headless';
+import { ErrorBoundary, For, Show, } from 'solid-js';
 
 import type { JSX } from 'solid-js';
 
-import { stationsRequest, fetchStations } from '~/lib/fetchStations';
+import { useStationsContext } from './StationsContext';
 
 function ChevronUpIcon(props: JSX.IntrinsicElements['svg']) {
     return (<svg
@@ -33,14 +22,21 @@ function ChevronUpIcon(props: JSX.IntrinsicElements['svg']) {
     </svg>) as JSX.Element;
 };
 
+
 export default function AccordionTest() {
-    const [stations] = createResource(stationsRequest, fetchStations);
+    const [stations, {setStationsRequest}] = useStationsContext();
 
     return (
         <Show when={stations()}>
             <h1>Find Stations</h1>
+            <button onClick={() => (setStationsRequest({
+                Latitude: 42.36,
+                Longitude: -71.05625,
+                Distance: 100,
+                CountLimit: 100,
+            }))}>test</button>
             <ErrorBoundary fallback={<p>pretty list broke</p>}>
-                <div class="w-full max-w-md p-2 mx-auto bg-black/90 rounded-2xl shadow-2xl">
+                <div class="w-full max-w-md p-2 mx-auto bg-black/90 rounded-2xl shadow-2xl max-h-screen overflow-scroll">
                     <Accordion class="space-y-2" defaultValue={stations()[0]} toggleable>
                         <For each={stations()} fallback={<div>Loading...</div>}>
                             {(station) => (<AccordionItem value={station}>
