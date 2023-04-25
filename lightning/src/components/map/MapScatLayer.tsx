@@ -25,12 +25,10 @@ export default function MapScatLayer(props: any) {
         } else if (stations.error) {
             return stations.error
         } else {
-            console.log('start');
             let buf: ScatData[] = [];
             for (const station of stations()) {
                 buf.push({ coordinates: [station.Loc.Coordinates[1], station.Loc.Coordinates[0]] })
             };
-            console.log('stop')
             return buf;
         };
     };
