@@ -14,14 +14,14 @@ const TEST_PACKET: StationRequest = {
 };
 
 export default function Stations() {
-    const [stations, {setStationsRequest}] = useStationsContext();
+    const [stations, { setStationsRequest }] = useStationsContext();
 
     setStationsRequest(TEST_PACKET);
 
     return (
-        <>
+        <main>
             <Title>Ride the Lightning</Title>
             <AccordionTest />
-        </>
+        </main>
     ) as JSX.Element;
 };

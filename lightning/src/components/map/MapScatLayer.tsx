@@ -17,7 +17,7 @@ export default function MapScatLayer(props: any) {
 
     const [scats, setScats] = createSignal([]);
 
-    function getCoords(stations) {
+    async function getCoords(stations) {
         if (stations() === undefined) { 
             return
         } else if (stations.loading) {
@@ -27,6 +27,7 @@ export default function MapScatLayer(props: any) {
         } else {
             let buf: ScatData[] = [];
             for (const station of stations()) {
+                // long lat
                 buf.push({ coordinates: [station.Loc.Coordinates[1], station.Loc.Coordinates[0]] })
             };
             return buf;
