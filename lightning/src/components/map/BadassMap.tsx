@@ -1,7 +1,6 @@
 import MapGL, { Viewport } from 'solid-map-gl';
 import * as maplibre from 'maplibre-gl';
 import MapControls from './MapControls';
-
 import { createSignal } from 'solid-js';
 
 import type { MapOptions } from 'maplibre-gl';
@@ -15,9 +14,15 @@ const MapArcLayer = unstable_clientOnly(() => import('~/components/map/MapArcLay
 import 'maplibre-gl/dist/maplibre-gl.css';
 import StyleJson from '~/style/style.json';
 
-export default function BadassMap(props: any) {
-    const [viewport, setViewport] = createSignal<Viewport>();
 
+export const [viewport, setViewport] = createSignal<Viewport>({
+    center: { lng: -71.05625, lat: 42.36, },
+    zoom: 15.5,
+    bearing: 160,
+    pitch: 60,
+});
+
+export default function BadassMap(props: any) {
     return (
         <MapGL
             mapLib={maplibre}

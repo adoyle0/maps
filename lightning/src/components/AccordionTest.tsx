@@ -5,6 +5,7 @@ import type { JSX } from 'solid-js';
 
 import { useStationsContext } from './StationsContext';
 
+
 function ChevronUpIcon(props: JSX.IntrinsicElements['svg']) {
     return (<svg
         xmlns="http://www.w3.org/2000/svg"
@@ -22,19 +23,20 @@ function ChevronUpIcon(props: JSX.IntrinsicElements['svg']) {
     </svg>) as JSX.Element;
 };
 
-
 export default function AccordionTest() {
     const [stations, {setStationsRequest}] = useStationsContext();
 
     return (
         <Show when={stations()}>
             <h1>Find Stations</h1>
+
             <button onClick={() => (setStationsRequest({
                 Latitude: 42.36,
                 Longitude: -71.05625,
                 Distance: 100,
                 CountLimit: 100,
             }))}>test</button>
+
             <ErrorBoundary fallback={<p>pretty list broke</p>}>
                 <div class="w-full max-w-md p-2 mx-auto bg-black/90 rounded-2xl shadow-2xl max-h-screen overflow-scroll">
                     <Accordion class="space-y-2" defaultValue={stations()[0]} toggleable>

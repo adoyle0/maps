@@ -1,15 +1,27 @@
 import { Title, } from 'solid-start';
-import { Suspense } from 'solid-js';
-
-import AccordionTest from '~/components/AccordionTest';
 
 import type { JSX } from 'solid-js';
 
+import AccordionTest from '~/components/AccordionTest';
+import { useStationsContext } from '~/components/StationsContext';
+
+
+const TEST_PACKET: StationRequest = {
+    Latitude: 42.36,
+    Longitude: -71.05625,
+    Distance: 1000,
+    CountLimit: 20000,
+};
+
 export default function Stations() {
-    return (<>
-        <Title>Ride the Lightning</Title>
-        <Suspense>
+    const [stations, {setStationsRequest}] = useStationsContext();
+
+    setStationsRequest(TEST_PACKET);
+
+    return (
+        <>
+            <Title>Ride the Lightning</Title>
             <AccordionTest />
-        </Suspense>
-    </>) as JSX.Element;
+        </>
+    ) as JSX.Element;
 };

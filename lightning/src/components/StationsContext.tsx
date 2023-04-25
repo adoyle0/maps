@@ -42,14 +42,7 @@ export const StationsContext = createContext();
 
 
 export function StationsProvider(props: any) {
-    const TEST_PACKET: StationRequest = {
-        Latitude: 42.36,
-        Longitude: -71.05625,
-        Distance: 10,
-        CountLimit: 10,
-    };
-
-    const [stationsRequest, setStationsRequest] = createSignal<StationRequest>(TEST_PACKET)
+    const [stationsRequest, setStationsRequest] = createSignal<StationRequest>()
 
     async function fetchStations() {
         const response = await fetch('https://kevinfwu.com/getnearest', {

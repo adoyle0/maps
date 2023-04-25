@@ -4,7 +4,9 @@ import type { JSX } from 'solid-js';
 
 
 export default function Home() {
-    return (<>
-        <Title>Ride the Lightning</Title>
-    </>) as JSX.Element;
+    return (
+        <>
+            <Title>Ride the Lightning</Title>
+        </>
+    ) as JSX.Element;
 };

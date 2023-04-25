@@ -4,10 +4,11 @@ import { Layer } from 'solid-map-gl';
 
 import type { JSX } from 'solid-js';
 
+
 type ArcData = {
     source: number[],
     target: number[]
-}
+};
 
 export default function MapArcLayer(props: any) {
     return (

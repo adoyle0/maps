@@ -1,7 +1,7 @@
 import { Control } from 'solid-map-gl';
 
-import type { JSX } from 'solid-js';
 import type { NavigationOptions, GeolocateOptions, AttributionOptions, ScaleOptions, } from 'maplibre-gl';
+import type { JSX } from 'solid-js';
 
 
 export default function MapControls() {
