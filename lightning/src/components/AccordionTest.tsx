@@ -27,7 +27,7 @@ export default function AccordionTest() {
     const [stations, { setStationsRequest }] = useStationsContext();
 
     return (
-        <Show when={stations()} fallback="<p>Loading Stations...</p>">
+        <Show when={stations()} fallback="Loading Stations...">
             <ErrorBoundary fallback={<p>pretty list broke</p>}>
                 <Accordion class="space-y-2" defaultValue={stations()[0]} toggleable>
                     <For each={stations()} fallback={<div>Loading...</div>}>
