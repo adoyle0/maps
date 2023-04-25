@@ -3,4 +3,4 @@
 clear
 
 cd ./dist
-./martin -l localhost:3005 ./data/us-northeast.mbtiles
+./martin -l localhost:3005 ./data/us.mbtiles

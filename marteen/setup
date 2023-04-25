@@ -2,7 +2,7 @@
 
 clear
 DATE_UTC=$(date -u +"%d%m%y")
-REGION=us-northeast
+REGION=us
 REGION_DATA=$REGION-$DATE_UTC.osm.pbf
 REGION_TILES=$REGION.mbtiles
 
