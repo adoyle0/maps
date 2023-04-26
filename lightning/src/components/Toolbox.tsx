@@ -8,6 +8,8 @@ export function Toolbox() {
     return (
         <ul>
             <h3>Toolbox</h3>
+            <hr />
+            <br />
 
             <li>
                 <button onClick={() => setViewport<Viewport>({
@@ -16,7 +18,7 @@ export function Toolbox() {
                     zoom: 15.5,
                     bearing: 160,
                     pitch: 60,
-                })} > Boston </button>
+                })} > Fly To Boston </button>
             </li>
 
             <li>
@@ -26,7 +28,7 @@ export function Toolbox() {
                     zoom: 15.5,
                     bearing: 10,
                     pitch: 60,
-                })} > NYC </button>
+                })} > Fly To NYC </button>
             </li>
         </ul>
     ) as JSX.Element;

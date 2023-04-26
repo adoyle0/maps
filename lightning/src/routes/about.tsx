@@ -9,6 +9,8 @@ export default function Home() {
             <Title>About Lightning</Title>
 
             <h1>About</h1>
+            <hr />
+            <br />
 
             <ul>
 
@@ -48,6 +50,9 @@ export default function Home() {
 
             <img src='5Q14.gif' />
 
+            <p> <a href="https://github.com/kevin-fwu/EVChargerFinder" target="_blank">
+                github.com/kevin-fwu/EVChargerFinder
+            </a> </p>
             <p> <a href="https://github.com/adoyle0/maps" target="_blank">
                 github.com/adoyle0/maps
             </a> </p>

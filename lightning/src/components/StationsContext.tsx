@@ -1,6 +1,5 @@
 import { createSignal, createContext, createResource, useContext } from "solid-js";
 
-
 type ChargingStation = {
     Name: string
     PhoneNumer: string
@@ -38,8 +37,8 @@ type StationResponse = {
     Loc: Location
 };
 
-export const StationsContext = createContext();
 
+export const StationsContext = createContext();
 
 export function StationsProvider(props: any) {
     const [stationsRequest, setStationsRequest] = createSignal<StationRequest>()

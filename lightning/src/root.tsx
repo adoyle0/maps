@@ -22,17 +22,18 @@ export default function Root() {
 
             <Body>
                 <ErrorBoundary>
-                    <StationsProvider>
-                        <MapContextProvider>
+                    <MapContextProvider>
+                        <StationsProvider>
+                            <BadassMap />
                             <A href="/">Map</A>
                             <A href="/stations">Stations</A>
                             <A href="/about">About</A>
+                            <A href="/tools">Tools</A>
                             <Routes>
                                 <FileRoutes />
                             </Routes>
-                            <BadassMap />
-                        </MapContextProvider>
-                    </StationsProvider>
+                        </StationsProvider>
+                    </MapContextProvider>
                 </ErrorBoundary>
                 <Scripts />
             </Body>

@@ -4,6 +4,8 @@ import { ErrorBoundary, For, Show, } from 'solid-js';
 import type { JSX } from 'solid-js';
 
 import { useStationsContext } from './StationsContext';
+import { useMapContext } from './MapContext';
+import { Viewport } from 'solid-map-gl';
 
 
 function ChevronUpIcon(props: JSX.IntrinsicElements['svg']) {
@@ -25,6 +27,19 @@ function ChevronUpIcon(props: JSX.IntrinsicElements['svg']) {
 
 export default function AccordionTest() {
     const [stations, { setStationsRequest }] = useStationsContext();
+    const [viewport, { setViewport }] = useMapContext();
+
+    function clickHandler(station) {
+        setViewport({
+            ...viewport(),
+            center: {
+                lng: station.Loc.Coordinates[1],
+                lat: station.Loc.Coordinates[0]
+            },
+            zoom: 18,
+            pitch: 30,
+        } as Viewport)
+    };
 
     return (
         <Show when={stations()} fallback="Loading Stations...">
@@ -34,6 +49,7 @@ export default function AccordionTest() {
                         {(station) => (<AccordionItem value={station}>
                             <AccordionHeader>
                                 <AccordionButton
+                                    onClick={() => clickHandler(station)}
                                     as="div"
                                     class="
                                         flex

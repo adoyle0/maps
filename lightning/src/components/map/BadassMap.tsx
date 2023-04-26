@@ -1,7 +1,7 @@
 import MapGL, { Viewport } from 'solid-map-gl';
 import * as maplibre from 'maplibre-gl';
 import MapControls from './MapControls';
-import { createSignal } from 'solid-js';
+import MapMarkerLayer from './MapMarkerLayer.tsx';
 
 import type { MapOptions } from 'maplibre-gl';
 import type { JSX } from 'solid-js';
@@ -37,6 +37,7 @@ export default function BadassMap(props: any) {
 
             <MapScatLayer />
             <MapArcLayer />
+            <MapMarkerLayer />
             <MapControls />
 
         </MapGL >

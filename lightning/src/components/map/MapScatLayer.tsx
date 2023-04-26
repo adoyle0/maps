@@ -43,10 +43,17 @@ export default function MapScatLayer(props: any) {
                     id: 'deckgl-scatterplot',
                     type: ScatterplotLayer,
                     data: scats(),
+                    pickable: true,
+                    stroked: false,
+                    lineWidthMaxPixels: 0,
+                    radiusMinPixels: 1,
+                    radiusMaxPixels: 100,
+                    radiusUnits: 'meters',
+                    getRadius: 1,
+                    radiusScale: 10,
                     getPosition: (d: any) => d.coordinates,
-                    getRadius: 90,
+                    antialiasing: false,
                     getFillColor: [255, 140, 0],
-                    getLineColor: [0, 0, 0,],
                 } as any)} />
         </Show>
     ) as JSX.Element;
