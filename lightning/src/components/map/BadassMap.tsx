@@ -1,7 +1,6 @@
 import MapGL, { Camera, Viewport } from 'solid-map-gl';
 import * as maplibre from 'maplibre-gl';
 import MapControls from './MapControls';
-import MapMarkerLayer from './MapMarkerLayer.tsx';
 
 import type { MapOptions } from 'maplibre-gl';
 import { createEffect, createSignal, JSX } from 'solid-js';
@@ -10,6 +9,7 @@ import { createEffect, createSignal, JSX } from 'solid-js';
 import { unstable_clientOnly } from 'solid-start';
 const MapScatLayer = unstable_clientOnly(() => import('~/components/map/MapScatLayer'));
 const MapArcLayer = unstable_clientOnly(() => import('~/components/map/MapArcLayer'));
+const MapIconLayer = unstable_clientOnly(() => import('~/components/map/MapIconLayer.tsx'));
 
 import 'maplibre-gl/dist/maplibre-gl.css';
 import StyleJson from '~/style/style.json';
@@ -48,6 +48,7 @@ export default function BadassMap(props: any) {
             />
             <MapScatLayer />
             <MapArcLayer />
+            <MapIconLayer />
             <MapControls />
 
         </MapGL >
