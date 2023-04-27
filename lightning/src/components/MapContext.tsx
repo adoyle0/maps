@@ -7,10 +7,10 @@ export const MapContext = createContext();
 
 export function MapContextProvider(props: any) {
     const [viewport, setViewport] = createSignal<Viewport>({
-        center: { lng: -71.05625, lat: 42.36, },
-        zoom: 15.5,
-        bearing: 160,
-        pitch: 60,
+        center: { lng: -90, lat: 38, },
+        zoom: 4,
+        bearing: 0,
+        pitch: 0,
     });
 
     return (
