@@ -4,8 +4,9 @@ import { ErrorBoundary, For, Show, } from 'solid-js';
 import type { JSX } from 'solid-js';
 
 import { useStationsContext } from './StationsContext';
-import { useMapContext } from './MapContext';
 import { Viewport } from 'solid-map-gl';
+
+import { viewport, setViewport } from './map/BadassMap';
 
 
 function ChevronUpIcon(props: JSX.IntrinsicElements['svg']) {
@@ -27,7 +28,6 @@ function ChevronUpIcon(props: JSX.IntrinsicElements['svg']) {
 
 export default function AccordionTest() {
     const [stations, { setStationsRequest }] = useStationsContext();
-    const [viewport, { setViewport }] = useMapContext();
 
     function clickHandler(station) {
         setViewport({

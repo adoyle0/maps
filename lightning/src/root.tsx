@@ -4,7 +4,6 @@ import { A, Body, ErrorBoundary, FileRoutes, Head, Html, Meta, Routes, Scripts, 
 import type { JSX } from "solid-js";
 
 import { StationsProvider } from "./components/StationsContext";
-import { MapContextProvider } from "./components/MapContext.tsx";
 import BadassMap from './components/map/BadassMap';
 
 import "./root.css";
@@ -22,18 +21,16 @@ export default function Root() {
 
             <Body>
                 <ErrorBoundary>
-                    <MapContextProvider>
-                        <StationsProvider>
-                            <BadassMap />
-                            <A href="/">Map</A>
-                            <A href="/stations">Stations</A>
-                            <A href="/about">About</A>
-                            <A href="/tools">Tools</A>
-                            <Routes>
-                                <FileRoutes />
-                            </Routes>
-                        </StationsProvider>
-                    </MapContextProvider>
+                    <StationsProvider>
+                        <BadassMap />
+                        <A href="/">Map</A>
+                        <A href="/stations">Stations</A>
+                        <A href="/about">About</A>
+                        <A href="/tools">Tools</A>
+                        <Routes>
+                            <FileRoutes />
+                        </Routes>
+                    </StationsProvider>
                 </ErrorBoundary>
                 <Scripts />
             </Body>

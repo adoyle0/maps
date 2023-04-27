@@ -5,6 +5,7 @@ import type { JSX } from 'solid-js';
 import AccordionTest from '~/components/AccordionTest';
 import { useStationsContext } from '~/components/StationsContext';
 
+import { viewport } from '~/components/map/BadassMap';
 
 const TEST_PACKET: StationRequest = {
     Latitude: 42.36,
@@ -16,7 +17,12 @@ const TEST_PACKET: StationRequest = {
 export default function Stations() {
     const [stations, { setStationsRequest }] = useStationsContext();
 
-    setStationsRequest(TEST_PACKET);
+    setStationsRequest({
+        Latitude: viewport().center.lat,
+        Longitude: viewport().center.lng,
+        Distance: 10,
+        CountLimit: 200,
+    });
 
     return (
         <main>

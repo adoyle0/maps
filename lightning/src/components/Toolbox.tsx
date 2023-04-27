@@ -1,11 +1,9 @@
 import type { JSX } from "solid-js"
 import type { Viewport } from "solid-map-gl";
 import { mapRotate, setMapRotate } from "./map/BadassMap";
-import { useMapContext } from "./MapContext";
-
+import { viewport, setViewport } from "./map/BadassMap";
 
 export function Toolbox() {
-    const [viewport, { setViewport }] = useMapContext();
     return (
         <ul>
             <h3>Toolbox</h3>

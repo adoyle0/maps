@@ -13,15 +13,19 @@ const MapArcLayer = unstable_clientOnly(() => import('~/components/map/MapArcLay
 
 import 'maplibre-gl/dist/maplibre-gl.css';
 import StyleJson from '~/style/style.json';
-import { useMapContext } from '../MapContext';
 
 
 export const [mapRotate, setMapRotate] = createSignal(false);
+createEffect(() => console.log('Rotate:', mapRotate()));
 
-createEffect(() => console.log(mapRotate()));
+export const [viewport, setViewport] = createSignal<Viewport>({
+    center: { lng: -90, lat: 38, },
+    zoom: 4,
+    bearing: 0,
+    pitch: 0,
+});
 
 export default function BadassMap(props: any) {
-    const [viewport, { setViewport }] = useMapContext();
     return (
         <MapGL
             mapLib={maplibre}
