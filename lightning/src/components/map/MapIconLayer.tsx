@@ -27,9 +27,12 @@ export default function MapIconLayer(props: any) {
                     iconMapping: ICON_MAPPING,
                     getIcon: d => 'marker',
                     sizeScale: 15,
-                    getPosition: d => [d.Loc.Coordinates[1],d.Loc.Coordinates[0]],
-                    getSize: d => 2,
-                    getColor: d => [d.Dist * 100, 140 - (d.Dist * 50), 0]
+                    getPosition: d => [d.Loc.Coordinates[1], d.Loc.Coordinates[0]],
+                    getSize: d => 3,
+                    getColor: d => [d.Dist * 100, 140 - (d.Dist * 50), 0],
+                    parameters: {
+                        depthTest: false
+                    }
                 } as any)} />
         </Show>
     ) as JSX.Element
