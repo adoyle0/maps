@@ -2,6 +2,8 @@ import type { JSX } from "solid-js"
 import type { Viewport } from "solid-map-gl";
 import { mapRotate, setMapRotate } from "./map/BadassMap";
 import { viewport, setViewport } from "./map/BadassMap";
+import { unstable_clientOnly } from "solid-start";
+const MapIconLayer = unstable_clientOnly(() => import('~/components/map/MapIconLayer.tsx'));
 
 export function Toolbox() {
     return (
@@ -14,7 +16,11 @@ export function Toolbox() {
             </li>
 
             <li>
-                <button onClick={() => setMapRotate(!mapRotate())} > Rotate </button>
+                <button onClick={() => setMapRotate(!mapRotate())} > Toggle Rotate </button>
+            </li>
+
+            <li>
+                <button onClick={() => setMapIcons()} > Clear Icons </button>
             </li>
 
             <br />
@@ -24,8 +30,8 @@ export function Toolbox() {
             <li>
                 <button onClick={() => setViewport<Viewport>({
                     ...viewport(),
-                    center: { lng: -90, lat: 38, },
-                    zoom: 4,
+                    center: { lng: -96, lat: 38, },
+                    zoom: 2.25,
                     bearing: 0,
                     pitch: 0,
                 })} > Default </button>
