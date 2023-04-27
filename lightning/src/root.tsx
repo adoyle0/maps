@@ -1,13 +1,25 @@
 // @refresh reload
 import { A, Body, ErrorBoundary, FileRoutes, Head, Html, Meta, Routes, Scripts, Title } from "solid-start";
 
-import type { JSX } from "solid-js";
+import { createSignal, JSX } from "solid-js";
 
 import { StationsProvider } from "./components/StationsContext";
 import BadassMap from './components/map/BadassMap';
 
 import "./root.css";
 
+
+async function fetchAllStations() {
+    let buf: ScatData[] = [];
+    const response = await fetch('https://kevinfwu.com/getall');
+    for (const station of await response.json()) {
+        buf.push({ coordinates: [station.Coordinates[1], station.Coordinates[0]] })
+    };
+    console.log('Rendering', buf.length, 'dots!');
+    return (buf);
+};
+
+export const [allStations, setAllStations] = createSignal(fetchAllStations());
 
 export default function Root() {
 

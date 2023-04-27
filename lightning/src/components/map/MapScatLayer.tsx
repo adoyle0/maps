@@ -4,6 +4,7 @@ import { Layer } from 'solid-map-gl';
 
 import type { JSX } from 'solid-js';
 
+import { allStations } from '~/root';
 
 
 type ScatData = {
@@ -12,23 +13,12 @@ type ScatData = {
 
 
 export default function MapScatLayer(props: any) {
-
-    async function fetchAllStations() {
-        let buf: ScatData[] = [];
-        const response = await fetch('https://kevinfwu.com/getall');
-        for (const station of await response.json()) {
-            buf.push({ coordinates: [station.Coordinates[1], station.Coordinates[0]] })
-        };
-        console.log('Rendering', buf.length, 'dots!');
-        return (buf);
-    };
-
     return (
         <Layer customLayer={
             new MapboxLayer({
                 id: 'deckgl-scatterplot',
                 type: ScatterplotLayer,
-                data: fetchAllStations(),
+                data: allStations(),
                 pickable: false,
                 stroked: false,
                 lineWidthMaxPixels: 0,
