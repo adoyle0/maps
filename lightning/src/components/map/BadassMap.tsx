@@ -1,10 +1,10 @@
-import MapGL, { Viewport } from 'solid-map-gl';
+import MapGL, { Camera, Viewport } from 'solid-map-gl';
 import * as maplibre from 'maplibre-gl';
 import MapControls from './MapControls';
 import MapMarkerLayer from './MapMarkerLayer.tsx';
 
 import type { MapOptions } from 'maplibre-gl';
-import type { JSX } from 'solid-js';
+import { createEffect, createSignal, JSX } from 'solid-js';
 
 // deck.gl
 import { unstable_clientOnly } from 'solid-start';
@@ -16,6 +16,9 @@ import StyleJson from '~/style/style.json';
 import { useMapContext } from '../MapContext';
 
 
+export const [mapRotate, setMapRotate] = createSignal(false);
+
+createEffect(() => console.log(mapRotate()));
 
 export default function BadassMap(props: any) {
     const [viewport, { setViewport }] = useMapContext();
@@ -35,6 +38,10 @@ export default function BadassMap(props: any) {
             transitionType="flyTo"
         >
 
+            <Camera
+                rotateViewport={mapRotate()}
+                reverse={true}
+            />
             <MapScatLayer />
             <MapArcLayer />
             <MapControls />

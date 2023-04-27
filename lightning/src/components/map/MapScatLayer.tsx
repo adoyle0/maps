@@ -19,6 +19,7 @@ export default function MapScatLayer(props: any) {
         for (const station of await response.json()) {
             buf.push({ coordinates: [station.Coordinates[1], station.Coordinates[0]] })
         };
+        console.log('Rendering', buf.length, 'dots!');
         return (buf);
     };
 
@@ -28,11 +29,11 @@ export default function MapScatLayer(props: any) {
                 id: 'deckgl-scatterplot',
                 type: ScatterplotLayer,
                 data: fetchAllStations(),
-                pickable: true,
+                pickable: false,
                 stroked: false,
                 lineWidthMaxPixels: 0,
                 radiusMinPixels: 1,
-                radiusMaxPixels: 100,
+                radiusMaxPixels: 50,
                 radiusUnits: 'meters',
                 getRadius: 1,
                 radiusScale: 10,

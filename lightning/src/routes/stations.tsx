@@ -9,8 +9,8 @@ import { useStationsContext } from '~/components/StationsContext';
 const TEST_PACKET: StationRequest = {
     Latitude: 42.36,
     Longitude: -71.05625,
-    Distance: 1000,
-    CountLimit: 20000,
+    Distance: 10,
+    CountLimit: 200,
 };
 
 export default function Stations() {
