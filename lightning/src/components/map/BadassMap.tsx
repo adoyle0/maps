@@ -19,6 +19,7 @@ export const [mapRotate, setMapRotate] = createSignal(false);
 createEffect(() => console.log('Rotate:', mapRotate()));
 
 export const [viewport, setViewport] = createSignal<Viewport>({
+    id: '0-0-0-0-0-0-0-0-0-1-0-0-0-1-0-0-0', // this is what it likes to be called or the map won't move...
     center: { lng: -96, lat: 38, },
     zoom: 4.25,
     bearing: 0,
