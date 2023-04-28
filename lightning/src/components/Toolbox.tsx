@@ -31,7 +31,7 @@ export function Toolbox() {
                 <button onClick={() => setViewport<Viewport>({
                     ...viewport(),
                     center: { lng: -96, lat: 38, },
-                    zoom: 2.25,
+                    zoom: 4.25,
                     bearing: 0,
                     pitch: 0,
                 })} > Default </button>

@@ -7,7 +7,7 @@
     },
     "type": "module",
     "devDependencies": {
-        "@types/node": "^18.16.1",
+        "@types/node": "^18.16.2",
         "esbuild": "^0.14.54",
         "postcss": "^8.4.23",
         "solid-start-node": "^0.2.26",
@@ -15,9 +15,9 @@
         "vite": "^4.3.3"
     },
     "dependencies": {
-        "@deck.gl/layers": "^8.9.11",
-        "@deck.gl/mapbox": "^8.9.11",
-        "@deck.gl/mesh-layers": "^8.9.11",
+        "@deck.gl/layers": "^8.9.12",
+        "@deck.gl/mapbox": "^8.9.12",
+        "@deck.gl/mesh-layers": "^8.9.12",
         "@solidjs/meta": "^0.28.4",
         "@solidjs/router": "^0.8.2",
         "autoprefixer": "^10.4.14",

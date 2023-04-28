@@ -2,14 +2,14 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@deck.gl/layers':
-    specifier: ^8.9.11
-    version: 8.9.11(@deck.gl/core@8.9.11)(@loaders.gl/core@3.3.3)(@luma.gl/core@8.5.19)
+    specifier: ^8.9.12
+    version: 8.9.12(@deck.gl/core@8.9.12)(@loaders.gl/core@3.3.3)(@luma.gl/core@8.5.19)
   '@deck.gl/mapbox':
-    specifier: ^8.9.11
-    version: 8.9.11(@deck.gl/core@8.9.11)
+    specifier: ^8.9.12
+    version: 8.9.12(@deck.gl/core@8.9.12)
   '@deck.gl/mesh-layers':
-    specifier: ^8.9.11
-    version: 8.9.11(@deck.gl/core@8.9.11)(@loaders.gl/images@3.3.3)(@luma.gl/core@8.5.19)(@luma.gl/engine@8.5.19)(@luma.gl/gltools@8.5.19)(@luma.gl/webgl@8.5.19)
+    specifier: ^8.9.12
+    version: 8.9.12(@deck.gl/core@8.9.12)(@loaders.gl/images@3.3.3)(@luma.gl/core@8.5.19)(@luma.gl/engine@8.5.19)(@luma.gl/gltools@8.5.19)(@luma.gl/webgl@8.5.19)
   '@solidjs/meta':
     specifier: ^0.28.4
     version: 0.28.4(solid-js@1.7.3)
@@ -46,8 +46,8 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: ^18.16.1
-    version: 18.16.1
+    specifier: ^18.16.2
+    version: 18.16.2
   esbuild:
     specifier: ^0.14.54
     version: 0.14.54
@@ -62,7 +62,7 @@ devDependencies:
     version: 4.9.5
   vite:
     specifier: ^4.3.3
-    version: 4.3.3(@types/node@18.16.1)
+    version: 4.3.3(@types/node@18.16.2)
 
 packages:
 
@@ -1178,8 +1178,8 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
 
-  /@deck.gl/core@8.9.11:
-    resolution: {integrity: sha512-BlTil1NTYgzs1/uMOgJfO5LqL8coOYypaYxRp4Gy0Zybf0BZSW0W7VVsFZ+9YXWFRZb+n3uYVYFUaq1G7K7/sA==}
+  /@deck.gl/core@8.9.12:
+    resolution: {integrity: sha512-J0+uLVe9r/e+684OarEV8yQyz2kC0gW0/9iVEPN+AIQiiGV7j+KOOKSCTW3ulytAnfTOmmHbz8cjm8MhqeuJLg==}
     dependencies:
       '@loaders.gl/core': 3.3.3
       '@loaders.gl/images': 3.3.3
@@ -1197,14 +1197,14 @@ packages:
       mjolnir.js: 2.7.1
     dev: false
 
-  /@deck.gl/layers@8.9.11(@deck.gl/core@8.9.11)(@loaders.gl/core@3.3.3)(@luma.gl/core@8.5.19):
-    resolution: {integrity: sha512-85KXPQCYlCb+J4BXjVkB2fg8VYO5d6ME7RPsl13eAIi7jFnJiYecgCnUlFMNsmy2qTFH5Ks8AKLWz54HOoUZ8Q==}
+  /@deck.gl/layers@8.9.12(@deck.gl/core@8.9.12)(@loaders.gl/core@3.3.3)(@luma.gl/core@8.5.19):
+    resolution: {integrity: sha512-pyVSOD6sEZsIReh8G5QvJRNpGpxKG/nhwEQvb9xwRUSpnvkXoGAIUmdomlNvvLt2EamyqI1S/1lJex8EPtsSyA==}
     peerDependencies:
       '@deck.gl/core': ^8.0.0
       '@loaders.gl/core': ^3.0.0
       '@luma.gl/core': ^8.0.0
     dependencies:
-      '@deck.gl/core': 8.9.11
+      '@deck.gl/core': 8.9.12
       '@loaders.gl/core': 3.3.3
       '@loaders.gl/images': 3.3.3
       '@loaders.gl/schema': 3.3.3
@@ -1217,22 +1217,22 @@ packages:
       earcut: 2.2.4
     dev: false
 
-  /@deck.gl/mapbox@8.9.11(@deck.gl/core@8.9.11):
-    resolution: {integrity: sha512-ix3NcnJVWHC4Bh1PqqxRkRj7GQR20BNbiJwq206Qj0zabOKUZGL4ZZfqd7cRJJ95YQMa9TZlx0Ipz5u4WvHhog==}
+  /@deck.gl/mapbox@8.9.12(@deck.gl/core@8.9.12):
+    resolution: {integrity: sha512-g+aIo/zPkdBDbCu72+ACZDzqW9l/4ovgw9Wjwjm4NbVs9uO+O9G53OLz8Pp6oRfNrO6ustalZJHT2FGC0jfmKg==}
     peerDependencies:
       '@deck.gl/core': ^8.0.0
     dependencies:
-      '@deck.gl/core': 8.9.11
+      '@deck.gl/core': 8.9.12
       '@types/mapbox-gl': 2.7.10
     dev: false
 
-  /@deck.gl/mesh-layers@8.9.11(@deck.gl/core@8.9.11)(@loaders.gl/images@3.3.3)(@luma.gl/core@8.5.19)(@luma.gl/engine@8.5.19)(@luma.gl/gltools@8.5.19)(@luma.gl/webgl@8.5.19):
-    resolution: {integrity: sha512-DnSYJ352BTXXBCkGuhJk9IU9jeN6blmdZAycxJ20Xmqzbnbo/NbYDyLGS5zgwZJdfdBY9R6jzZn4YI0KZ5anKA==}
+  /@deck.gl/mesh-layers@8.9.12(@deck.gl/core@8.9.12)(@loaders.gl/images@3.3.3)(@luma.gl/core@8.5.19)(@luma.gl/engine@8.5.19)(@luma.gl/gltools@8.5.19)(@luma.gl/webgl@8.5.19):
+    resolution: {integrity: sha512-pZtHX+ZpS6so5K+SfRyT/dGDloeQmTqHdgmDGAaBAi/WKLuzMG58lzpIa+yTZXbyss6CDEMnKES7jGWZNhh5PA==}
     peerDependencies:
       '@deck.gl/core': ^8.0.0
       '@luma.gl/core': ^8.0.0
     dependencies:
-      '@deck.gl/core': 8.9.11
+      '@deck.gl/core': 8.9.12
       '@loaders.gl/gltf': 3.3.3
       '@luma.gl/constants': 8.5.19
       '@luma.gl/core': 8.5.19
@@ -1868,8 +1868,8 @@ packages:
       '@types/pbf': 3.0.2
     dev: false
 
-  /@types/node@18.16.1:
-    resolution: {integrity: sha512-DZxSZWXxFfOlx7k7Rv4LAyiMroaxa3Ly/7OOzZO8cBNho0YzAi4qlbrx8W27JGqG57IgR/6J7r+nOJWw6kcvZA==}
+  /@types/node@18.16.2:
+    resolution: {integrity: sha512-GQW/JL/5Fz/0I8RpeBG9lKp0+aNcXEaVL71c0D2Q0QHDTFvlYKT7an0onCUXj85anv7b4/WesqdfchLc0jtsCg==}
 
   /@types/offscreencanvas@2019.7.0:
     resolution: {integrity: sha512-PGcyveRIpL1XIqK8eBsmRBt76eFgtzuPiSTyKHZxnGemp2yzGzWpjYKAfK3wIMiU7eH+851yEpiuP8JZerTmWg==}
@@ -2038,7 +2038,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001481
-      electron-to-chromium: 1.4.374
+      electron-to-chromium: 1.4.376
       node-releases: 2.0.10
       update-browserslist-db: 1.0.11(browserslist@4.21.5)
 
@@ -2237,8 +2237,8 @@ packages:
   /ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  /electron-to-chromium@1.4.374:
-    resolution: {integrity: sha512-dNP9tQNTrjgVlSXMqGaj0BdrCS+9pcUvy5/emB6x8kh0YwCoDZ0Z4ce1+7aod+KhybHUd5o5LgKrc5al4kVmzQ==}
+  /electron-to-chromium@1.4.376:
+    resolution: {integrity: sha512-TFeOKd98TpJzRHkr4Aorn16QkMnuCQuGAE6IZ0wYF+qkbSfMPqjplvRppR02tMUpVxZz8nyBNvVm9lIZsqrbPQ==}
 
   /emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -3233,7 +3233,7 @@ packages:
       picomatch: 2.3.1
       rollup: 3.21.0
       source-map: 0.7.4
-      yargs: 17.7.1
+      yargs: 17.7.2
 
   /rollup-route-manifest@1.0.0(rollup@3.21.0):
     resolution: {integrity: sha512-3CmcMmCLAzJDUXiO3z6386/Pt8/k9xTZv8gIHyXI8hYGoAInnYdOsFXiGGzQRMy6TXR1jUZme2qbdwjH2nFMjg==}
@@ -3344,7 +3344,7 @@ packages:
       solid-start: 0.2.26(@solidjs/meta@0.28.4)(@solidjs/router@0.8.2)(solid-js@1.7.3)(solid-start-node@0.2.26)(vite@4.3.3)
       terser: 5.17.1
       undici: 5.22.0
-      vite: 4.3.3(@types/node@18.16.1)
+      vite: 4.3.3(@types/node@18.16.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -3414,7 +3414,7 @@ packages:
       solid-start-node: 0.2.26(solid-start@0.2.26)(undici@5.22.0)(vite@4.3.3)
       terser: 5.17.1
       undici: 5.22.0
-      vite: 4.3.3(@types/node@18.16.1)
+      vite: 4.3.3(@types/node@18.16.2)
       vite-plugin-inspect: 0.7.24(rollup@3.21.0)(vite@4.3.3)
       vite-plugin-solid: 2.7.0(solid-js@1.7.3)(vite@4.3.3)
       wait-on: 6.0.1(debug@4.3.4)
@@ -3674,7 +3674,7 @@ packages:
       fs-extra: 11.1.1
       picocolors: 1.0.0
       sirv: 2.0.3
-      vite: 4.3.3(@types/node@18.16.1)
+      vite: 4.3.3(@types/node@18.16.2)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -3692,12 +3692,12 @@ packages:
       merge-anything: 5.1.5
       solid-js: 1.7.3
       solid-refresh: 0.5.2(solid-js@1.7.3)
-      vite: 4.3.3(@types/node@18.16.1)
+      vite: 4.3.3(@types/node@18.16.2)
       vitefu: 0.2.4(vite@4.3.3)
     transitivePeerDependencies:
       - supports-color
 
-  /vite@4.3.3(@types/node@18.16.1):
+  /vite@4.3.3(@types/node@18.16.2):
     resolution: {integrity: sha512-MwFlLBO4udZXd+VBcezo3u8mC77YQk+ik+fbc0GZWGgzfbPP+8Kf0fldhARqvSYmtIWoAJ5BXPClUbMTlqFxrA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3722,7 +3722,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.16.1
+      '@types/node': 18.16.2
       esbuild: 0.17.18
       postcss: 8.4.23
       rollup: 3.21.0
@@ -3737,7 +3737,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.3.3(@types/node@18.16.1)
+      vite: 4.3.3(@types/node@18.16.2)
 
   /vt-pbf@3.1.3:
     resolution: {integrity: sha512-2LzDFzt0mZKZ9IpVF2r69G9bXaP2Q2sArJCmcCgvfTdCCZzSyz4aCLoQyUilu37Ll56tCblIZrXFIjNUpGIlmA==}
@@ -3794,8 +3794,8 @@ packages:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
     engines: {node: '>=12'}
 
-  /yargs@17.7.1:
-    resolution: {integrity: sha512-cwiTb08Xuv5fqF4AovYacTFNxk62th7LKJ6BL9IGUpTJrWoU7/7WdQGTP2SjKf1dUNBGzDd28p/Yfs/GI6JrLw==}
+  /yargs@17.7.2:
+    resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 8.0.1
