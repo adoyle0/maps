@@ -9,11 +9,12 @@ import { createEffect, createSignal, JSX } from 'solid-js';
 import { unstable_clientOnly } from 'solid-start';
 const MapScatLayer = unstable_clientOnly(() => import('~/components/map/MapScatLayer'));
 const MapArcLayer = unstable_clientOnly(() => import('~/components/map/MapArcLayer'));
-const MapIconLayer = unstable_clientOnly(() => import('~/components/map/MapIconLayer.tsx'));
+const MapIconLayer = unstable_clientOnly(() => import('~/components/map/MapIconLayer'));
 
 import 'maplibre-gl/dist/maplibre-gl.css';
 import StyleJson from '~/style/style.json';
 
+export const [mapIcons, setMapIcons] = createSignal([]);
 
 export const [mapRotate, setMapRotate] = createSignal(false);
 createEffect(() => console.log('Rotate:', mapRotate()));
