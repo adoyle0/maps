@@ -2,14 +2,14 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@deck.gl/layers':
-    specifier: ^8.9.14
-    version: 8.9.14(@deck.gl/core@8.9.14)(@loaders.gl/core@3.3.5)(@luma.gl/core@8.5.20)
+    specifier: ^8.9.15
+    version: 8.9.15(@deck.gl/core@8.9.15)(@loaders.gl/core@3.3.5)(@luma.gl/core@8.5.20)
   '@deck.gl/mapbox':
-    specifier: ^8.9.14
-    version: 8.9.14(@deck.gl/core@8.9.14)
+    specifier: ^8.9.15
+    version: 8.9.15(@deck.gl/core@8.9.15)
   '@deck.gl/mesh-layers':
-    specifier: ^8.9.14
-    version: 8.9.14(@deck.gl/core@8.9.14)(@loaders.gl/images@3.3.5)(@luma.gl/core@8.5.20)(@luma.gl/engine@8.5.20)(@luma.gl/gltools@8.5.20)(@luma.gl/webgl@8.5.20)
+    specifier: ^8.9.15
+    version: 8.9.15(@deck.gl/core@8.9.15)(@loaders.gl/images@3.3.5)(@luma.gl/core@8.5.20)(@luma.gl/engine@8.5.20)(@luma.gl/gltools@8.5.20)(@luma.gl/webgl@8.5.20)
   '@solidjs/meta':
     specifier: ^0.28.5
     version: 0.28.5(solid-js@1.7.5)
@@ -1182,8 +1182,8 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
 
-  /@deck.gl/core@8.9.14:
-    resolution: {integrity: sha512-ziWnQUd92HHD+Pb6/azen5Nb6SdR7u9WCLbI/PS0LOIYtuTis7fcVjp5sKi7yEte8Za8LHU0V5dB4ekE9Ni22w==}
+  /@deck.gl/core@8.9.15:
+    resolution: {integrity: sha512-9fUnrRBITgaYHTEYgbSXUaK/x/gRwlKTF68YCy0Us3BoCbRqPqHZTXxOENiN7gHzdHmrDu6ArR71LcI4ZEGWoA==}
     dependencies:
       '@loaders.gl/core': 3.3.5
       '@loaders.gl/images': 3.3.5
@@ -1201,14 +1201,14 @@ packages:
       mjolnir.js: 2.7.1
     dev: false
 
-  /@deck.gl/layers@8.9.14(@deck.gl/core@8.9.14)(@loaders.gl/core@3.3.5)(@luma.gl/core@8.5.20):
-    resolution: {integrity: sha512-oo0rURBV5QUvDr9qb9stahYdApYAyufEAFc5D4XW01cgnlHvR2x76rdbn0lZvXYCQM1W7NyzNLOc66B6XOR3sQ==}
+  /@deck.gl/layers@8.9.15(@deck.gl/core@8.9.15)(@loaders.gl/core@3.3.5)(@luma.gl/core@8.5.20):
+    resolution: {integrity: sha512-K92TRGXYOGe8bnqfU7MR66cu1ui05PWFqYItc037N4NUBaiOxELfg83JYhSY1KeExHTtPau8nj/x7EILvFR0kQ==}
     peerDependencies:
       '@deck.gl/core': ^8.0.0
       '@loaders.gl/core': ^3.0.0
       '@luma.gl/core': ^8.0.0
     dependencies:
-      '@deck.gl/core': 8.9.14
+      '@deck.gl/core': 8.9.15
       '@loaders.gl/core': 3.3.5
       '@loaders.gl/images': 3.3.5
       '@loaders.gl/schema': 3.3.5
@@ -1221,22 +1221,22 @@ packages:
       earcut: 2.2.4
     dev: false
 
-  /@deck.gl/mapbox@8.9.14(@deck.gl/core@8.9.14):
-    resolution: {integrity: sha512-ydp8+AUjSTIZDbii7PeJmClmpWGVjF65PJ8iGHL0jQOlzSf47e5Uy28fvB+tXYyz33KSD6oV+L7gWu7co8mEwA==}
+  /@deck.gl/mapbox@8.9.15(@deck.gl/core@8.9.15):
+    resolution: {integrity: sha512-TSB/3pEC1IR+/m5piuiXpxwMtYPScpWslO2vK9LqjE/R2z2auysCzLXV/s1NUpVSwSwh3S36L1X3GesPkeJIXg==}
     peerDependencies:
       '@deck.gl/core': ^8.0.0
     dependencies:
-      '@deck.gl/core': 8.9.14
+      '@deck.gl/core': 8.9.15
       '@types/mapbox-gl': 2.7.11
     dev: false
 
-  /@deck.gl/mesh-layers@8.9.14(@deck.gl/core@8.9.14)(@loaders.gl/images@3.3.5)(@luma.gl/core@8.5.20)(@luma.gl/engine@8.5.20)(@luma.gl/gltools@8.5.20)(@luma.gl/webgl@8.5.20):
-    resolution: {integrity: sha512-MvGJ+xGhII4+M1xwGjuSdkGuNm7Y3sEBy50+rxidQQ55lzkerV6aPn3p4BOldeCXpKX0NqIXOF7D0rNgUplNhw==}
+  /@deck.gl/mesh-layers@8.9.15(@deck.gl/core@8.9.15)(@loaders.gl/images@3.3.5)(@luma.gl/core@8.5.20)(@luma.gl/engine@8.5.20)(@luma.gl/gltools@8.5.20)(@luma.gl/webgl@8.5.20):
+    resolution: {integrity: sha512-DXiZqyiQDwPXzzfX1N6IBccy0xkTcKgbNjNaDx+cdC5Ud8AzlV5RoyAVKS8YiJxn8kdUBfFY0SnXQnzMT9DWSQ==}
     peerDependencies:
       '@deck.gl/core': ^8.0.0
       '@luma.gl/core': ^8.0.0
     dependencies:
-      '@deck.gl/core': 8.9.14
+      '@deck.gl/core': 8.9.15
       '@loaders.gl/gltf': 3.3.5
       '@luma.gl/constants': 8.5.20
       '@luma.gl/core': 8.5.20
