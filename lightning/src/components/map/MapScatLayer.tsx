@@ -12,7 +12,6 @@ type ScatData = {
     coordinates: number[]
 }
 
-
 export default function MapScatLayer(props: any) {
 
     function onHover(info, event) {
