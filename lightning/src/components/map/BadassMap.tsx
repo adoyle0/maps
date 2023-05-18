@@ -14,7 +14,6 @@ const MapIconLayer = unstable_clientOnly(() => import('~/components/map/MapIconL
 import 'maplibre-gl/dist/maplibre-gl.css';
 import StyleJson from '~/style/style.json';
 
-export const [mapIcons, setMapIcons] = createSignal([]);
 
 export const [mapRotate, setMapRotate] = createSignal(false);
 createEffect(() => console.log('Rotate:', mapRotate()));
