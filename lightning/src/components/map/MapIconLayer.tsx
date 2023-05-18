@@ -15,6 +15,11 @@ export default function MapIconLayer(props: any) {
 
     createEffect(() => console.log("Watch me update but not trigger a render!", stations()));
 
+    function deezCompare() {
+        console.log('comparing');
+        return false
+    }
+    
     return (
         <Show when={stations()}>
             <Layer customLayer={
@@ -30,6 +35,8 @@ export default function MapIconLayer(props: any) {
                     getPosition: d => [d.Loc.Coordinates[1], d.Loc.Coordinates[0]],
                     getSize: d => 3,
                     getColor: d => [d.Dist * 100, 140 - (d.Dist * 50), 0],
+                    dataComparator: deezCompare,
+                    _dataDiff: () => console.log('datadiff'),
                     parameters: {
                         depthTest: false,
                     },
