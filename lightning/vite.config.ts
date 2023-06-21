@@ -3,5 +3,4 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
     plugins: [solid()],
-    server: { port: 3006 },
 });
