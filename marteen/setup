@@ -29,8 +29,8 @@ fi
 cd ../dist
 if [ ! -f martin ]; then
     echo Downloading and extracting martin...
-    wget -c https://github.com/maplibre/martin/releases/latest/download/martin-Linux-x86_64.tar.gz &&
-        tar -xzvf martin-Linux-x86_64.tar.gz
+    wget -c https://github.com/maplibre/martin/releases/latest/download/martin-x86_64-unknown-linux-gnu.tar.gz &&
+        tar -xzvf martin-x86_64-unknown-linux-gnu.tar.gz
 else
     echo martin already exists
 fi
